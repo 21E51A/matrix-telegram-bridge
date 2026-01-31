@@ -1,0 +1,31 @@
+server_name: "yourdomain.duckdns.org"
+
+pid_file: /data/homeserver.pid
+
+listeners:
+  - port: 8008
+    type: http
+    tls: false
+    x_forwarded: true
+    bind_addresses: ['0.0.0.0']
+    resources:
+      - names: [client, federation]
+        compress: false
+
+
+database:
+  name: sqlite3
+  args:
+    database: /data/homeserver.db
+
+log_config: "/data/yourdomain.duckdns.org.log.config"
+
+media_store_path: /data/media_store
+
+registration_shared_secret: "la=NgBiXpYo078Se=9-q;Imi:4_*RTJXhfCLENafq^HKPJ0Q.W"
+
+report_stats: false
+
+macaroon_secret_key: "Vv-DHvtJHQ_eo48@CtoxWtAFUASi@FBaUYfh&8H4:n,&g-UQL8"
+
+form_secret: ";L1Y6s

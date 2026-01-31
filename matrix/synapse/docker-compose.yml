@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: synapse
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    ports:
+      - "8008:8008"
+      - "8448:8448"
+    environment:
+      - SYNAPSE_SERVER_NAME=yourdomain.duckdns.org
+      - SYNAPSE_REPORT_STATS=no
+

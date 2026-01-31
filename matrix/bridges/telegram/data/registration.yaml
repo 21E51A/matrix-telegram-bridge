@@ -1,0 +1,17 @@
+id: telegram
+as_token: 3RtZeccyiRbPtYqqWBa1JVRvUeoUQZa1YDsqsQEy8cqW-hj-e5Yuw70YO3OyjBRK
+hs_token: S5YOhCjZxgd6Xwn1lVqFJZpxXf9iab8URzav4V1YWgH40bK3maPsrQM4wlYKQVrE
+namespaces:
+    users:
+    - exclusive: true
+      regex: '@telegram_.*:yourdomain\.duckdns\.org'
+    - exclusive: true
+      regex: '@telegrambot:yourdomain\.duckdns\.org'
+    aliases:
+    - exclusive: true
+      regex: \#telegram_.*:yourdomain\.duckdns\.org
+url: http://mautrix-telegram:29317
+sender_localpart: NKOeKBzl-lcNa2DrUToL83Ygdvl4E6SNquj7jXW58fhmJ9qB2hUwlr9DD5fJmeHW
+rate_limited: false
+de.sorunome.msc2409.push_ephemeral: true
+receive_ephemeral: true

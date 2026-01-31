@@ -1,0 +1,17 @@
+id: telegram
+as_token: YfAN-5hBzJhCfaZMLtwojftKiWwHPkSBc3FGZnEfqz5KAIQIRfSKyRSXA8j3O0Nq
+hs_token: W4Y14rPmWoeUD9RZdHXFRj4GGvpyG8xN5DvJsiMtH2_--irUqWkoGOSKEb2_h1bk
+namespaces:
+    users:
+    - exclusive: true
+      regex: '@telegram_.*:akash\-dailyfix\-matrix\.duckdns\.org'
+    - exclusive: true
+      regex: '@telegrambot:akash\-dailyfix\-matrix\.duckdns\.org'
+    aliases:
+    - exclusive: true
+      regex: \#telegram_.*:akash\-dailyfix\-matrix\.duckdns\.org
+url: http://mautrix-telegram:29317
+sender_localpart: JsWgrh1eXHowmUVkhQKpDfrxWVxzdB4HlqlxgEJDD3m-TyBO6kEnWZI6ya8wAEqx
+rate_limited: false
+de.sorunome.msc2409.push_ephemeral: true
+receive_ephemeral: true

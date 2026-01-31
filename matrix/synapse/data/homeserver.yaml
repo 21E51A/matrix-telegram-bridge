@@ -1,0 +1,86 @@
+# ===============================
+# Basic Server Config
+# ===============================
+
+server_name: "yourdomain.duckdns.org"
+public_baseurl: "http://yourdomain.duckdns.org:8008/"
+
+pid_file: /data/homeserver.pid
+
+# ===============================
+# Network / Listener
+# ===============================
+
+listeners:
+  - port: 8008
+    type: http
+    tls: false
+    bind_addresses: ['0.0.0.0']
+    x_forwarded: true
+
+    resources:
+      - names: [client, federation]
+        compress: false
+
+# ===============================
+# Database (SQLite - OK for small setup)
+# ===============================
+
+database:
+  name: sqlite3
+  args:
+    database: /data/homeserver.db
+
+# ===============================
+# Logging
+# ===============================
+
+log_config: "/data/yourdomain.duckdns.org.log.config"
+
+# ===============================
+# Media Storage
+# ===============================
+
+media_store_path: /data/media_store
+
+# ===============================
+# Registration (User Signup)
+# ===============================
+
+enable_registration: true
+enable_registration_without_verification: true
+
+registration_shared_secret: "CHANGE_THIS_SECRET"
+
+# ===============================
+# Security
+# ===============================
+
+macaroon_secret_key: "Vv-DHvtJHQ_eo48@CtoxWtAFUASi@FBaUYfh&8H4:n,&g-UQL8"
+form_secret: ";L1Y6sT_I8x;ao0iek1V:B9;SI++pCq^Zom=YK;x=_5h4e.-hm"
+
+signing_key_path: "/data/yourdomain.duckdns.org.signing.key"
+
+# ===============================
+# Federation
+# ===============================
+
+trusted_key_servers:
+  - server_name: "matrix.org"
+
+# ===============================
+# App Services (Telegram Bridge)
+# ===============================
+
+app_service_config_files:
+  - /data/registration.yaml
+
+# ===============================
+# Statistics
+# ===============================
+
+report_stats: false
+
+# ===============================
+# End
+# ===============================
